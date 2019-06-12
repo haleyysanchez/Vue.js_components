@@ -1,0 +1,7 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+  <h1>Vue.js Component</h1>
+  <p1>{{ message }}</p1>
+  <button v-on:click= "timeStamp">Click to get the countdown until NASA SEES!</button>
+</div>
