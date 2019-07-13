@@ -18,21 +18,27 @@
   <script>  
     require([
       "esri/WebScene",
-      "esri/views/SceneView"
-    ], function(WebScene, SceneView) {
-
+      "esri/views/SceneView",
+      "esri/widgets/Legend"
+    ], function(WebScene, SceneView, Legend) {
       var webscene = new WebScene({
         portalItem: {
           id: "579f97b2f3b94d4a8e48a5f140a6639b"
         }
       });
-
       var view = new SceneView({
         container: "viewDiv",
         map: webscene
       });
-
+      
+      var legend = new Legend({
+        view: view
+      });
+      view.ui.add(legend, "top-right");
+      
     });
+    
+    
   </script>
 </head>
 <body>
